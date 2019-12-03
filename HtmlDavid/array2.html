@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    //Determinar cual de los dos número es mayor
+    //En un array el primer valor comienza en la posicion 0
+      var valores = [true, 3, false, "hola", "adios", 2];
+      if (valores[1]>valores[5]) {
+        console.log(valores[1] + ' es mayor que el valor '+ valores[5]);
+      }
+      else{
+        console.log(`${valores[1]} es mas pequeño que el valor ${valores[5]}`);
+      }
+
+      //Utilizando exclusivamente los dos valores booleanos del array,
+      //determinar los operadores necesarios para obtener un resultado true y otro resultado false
+      if (valores[0]==true) {
+        console.log(valores[0]);
+      }
+      if (valores[2]==false){
+        console.log(valores[2]);
+      }
+
+      //Determinar el resultado de las cinco operaciones matemáticas realizadas con los dos elementos numéricos
+      var suma = valores[1] + valores[5];
+      console.log(`El resultado de la suma es ${suma}`);
+      var resta = valores[1] - valores[5];
+      console.log(`El resultado de la resta es ${resta}`);
+      var multiplicacion = valores[1] * valores[5];
+      console.log(`El resultado de la multiplicacion es ${multiplicacion}`);
+      var division = valores[1] / valores[5];
+      console.log(`El resultado de la division es ${division}`);
+      var porcentaje = valores[1] % valores[5];
+      console.log(`El resultado de la porcentaje es ${porcentaje}`);
+    </script>
+  </body>
+</html>
