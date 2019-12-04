@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/formulario.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Ejercicio 2 con formularios</title>
+  </head>
+  <body>
+
+    <header id="main_header">
+      <img src="img/logo.png" id="logo"/>
+      <nav id="main_menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Producto</a></li>
+          <li><a href="#">Formulario subscripcion</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="main_section">
+      <div id="form">
+        <form name="miform"
+         action="index.html"
+         method="post"
+         id="pugiform"
+         enctype="multipart/form-data">
+          <fieldset>
+            <div class="campos">
+              <label for="nombre">Nombre</label>
+              <input class="control" type="text" name="nombre" value="" id="nombre" autofocus required placeholder="Introduzca un nombre" autocomplete="off">
+            </div>
+            <div class="campos">
+              <label for="pass">Password</label>
+              <input class="control" type="password" name="pass" value="" id="pass" class="pass" placeholder="Password" pattern=^[0-9].{6,}[A-Z]$ required>
+            </div>
+            <div class="campos">
+              <label for="hombre">Hombre:</label>
+              <input type="radio" name="genero" id="hombre"/>
+              <label for="mujer">Mujer:</label>
+              <input type="radio" name="genero" id="mujer"/>
+              <label for="otro">Otro:</label>
+              <input type="radio" name="genero" id="otro"/>
+            </div>
+            <div class="campos">
+              <label for="aceptar">I´m agree with the conditions</label>
+              <input type="checkbox" name="aceptar" id="aceptar">
+            </div>
+            <div class="campos">
+              <label for="email">Introduzca su email:</label>
+              <input class="control" type="email" name="email" id="email">
+            </div>
+            <div class="campos">
+              <label for="anos">Edad</label>
+              <input class="control" type="number" name="anos" value="" id="anos" min="0" max="10">
+            </div>
+            <div class="campos">
+              <label for="color">Elija su color de camiseta</label>
+              <input class="control" type="color" name="color" id="color">
+            </div>
+            <div class="campos">
+              <label for="provincias">Provincias</label>
+              <input class="control" list="provincias">
+                <datalist id="provincias">
+                  <option value="Andalucia">
+                  <option value="Galicia">
+                  <option value="Madrid">
+                  <option value="Aragon">
+                  <option value="Extremadura">
+                  <option value="Pais Vasco">
+                  <option value="Cataluña">
+                </datalist>
+            </div>
+            <div class="campos">
+              <label for="fichero">Archivos</label>
+              <input class="control" type="file" name="fichero" id="fichero" multiple="multiple">
+            </div>
+            <div class="campos">
+              <input type="hidden" name="oculto" value="oculto" id="oculto">
+            </div>
+            <div class="campos">
+              <label for="comentarios">Opiniones</label>
+              <textarea id="comentarios" name="comentarios"></textarea>
+            </div>
+            <div class="campos">
+              <label for="buscar">Buscar</label>
+              <input class="control" type="search" name="buscar" id="buscar">
+            </div>
+            <div>
+              <label for="url">Introduzca una Url:</label>
+              <input class="control" type="url" name="url" id="url">
+            </div>
+            <div class="campos">
+              <input type="submit" name="submit" value="Submit" id="submit">
+              <input type="reset" name="reset" value="Reset" id="reset">
+            </div>
+            <progress value="70" max="100">70 %</progress>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <footer id="main_footer">
+      <div>
+        <p>Email: Cristian99puga@gmail.com</p>
+        <p>Numero de telefono: 635647895</p>
+      </div>
+      <div>
+        <nav id="nav_footer">
+          <ul>
+            <li><a href="#">Subscription</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contact me</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="img_footer">
+        <a href="https://facebook.com"><img src="img/facebook.png" class="redes"></a>
+        <a href="https://instagram.com"><img src="img/instagram.png" class="redes"></a>
+        <a href="https://twitter.com"><img src="img/twitter.png" class="redes"></a>
+      </div>
+      <div class="copy">
+        <p>Copyright 2019 Cristian Puga</p>
+      </div>
+    </footer>
+  </body>
+</html>
