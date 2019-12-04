@@ -20,8 +20,32 @@
     //Mete las dos variables linea1 y linea2 en el array lineas
     lineas.push(linea1)
     lineas.push(linea2)
-    console.log(lineas);
+    //console.log(lineas);
     //Crea una función llamada calculaBaseImponible que sea capaz de sumar todas números almacenados en un array y devolver el resultado
+    function calculaBaseImponible(){
+      let total = 0;
+      for (let i = 0; i < lineas.length; i++){
+        total+=lineas[i];
+      }
+        console.log(total);
+    }
+
+    //Llama a la función calculaBaseImponible pasándole como parámetro el array lineas, almacena el resultado en una variable llamada baseImponible
+    var baseImponible = calculaBaseImponible(lineas);
+    //var baseImponible = 100;
+    //Crea un función calculaIVA que calcule el IVA de la factura, para ello le meteremos dos parámetros: el primero será la base imponible
+    //y el segundo el % de IVA a calcular, devolverá el resultado de la fórmula: r=b*X%IVA donde X es el segundo parámetro,
+    //b es la base imponible y r es el resultado de la cuenta. Ejemplo si la base imponible es 100 y el IVA es del 21% el resultado
+    //deberá ser 21
+    var iva = 21;
+    function calculaIVA(impo, resul){
+      var r = 0;
+      r = impo*resul/100
+      console.log(r);
+    }
+
+    calculaIVA(baseImponible, iva);
+
 
     </script>
   </body>
