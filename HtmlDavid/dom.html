@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="js/jquery-3.4.1.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <h1>Ejercicios del DOM</h1>
+    <div>
+    </div>
+
+    <script type="text/javascript">
+      //incluye un párrafo en el html y modifica el contenido del párrafo desde Jquery
+      //3. Inserta otro párrafo al final del body
+      //4. Inserta un párrafo entre los dos párrafos anteriores y colócale un texto
+      //5. Modifica el color de fondo del último párrafo del HTML
+      //6. Añade un id al último párrafo desde Jquery
+      //7. Quita el id al último párrafo desde Jquery
+      $(document).ready(function(){
+        $("div").append("<p>Lamborguini Urus</p>");
+        $("p").text("Audi RS7 sportback");
+        $("p:last").after("<p>Mercedes amg 45</p>");
+        $("p:first").after("<p>BMW m140i</p>")
+        $("p:last").css({'background-color':'pink'})
+        $("p:last").attr("id","ultimo")
+      });
+    </script>
+  </body>
+</html>

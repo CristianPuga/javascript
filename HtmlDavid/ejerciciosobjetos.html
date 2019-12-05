@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="js/objetos3.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <h1>Ejecución de código Javascript utilizando la etiqueta script</h1>
+    <div>
+
+    </div>
+    <div>
+      <ul>
+      <li>Ron Barcelo</li>
+      <li>Malibu con Piña</li>
+      <li>Licor 43 con chocolate</li>
+      <li>Vodka con Limon</li>
+      <li>Ginebra con tonica</li>
+      <li>Puerto de indias</li>
+      <li>Jagguer</li>
+      <li>Tequila</li>
+      <li>Canela picante</li>
+      <li>Vodka kiwi</li>
+      </ul>
+    </div>
+    <form action="ejemplo.php" method="get">
+      <p>Nombre: <input type="text" name="nombre" size="40"></p>
+      <p>Año de nacimiento: <input type="number" name="nacido" min="1900"></p>
+      <p>Sexo:
+        <input type="radio" name="hm" value="h"> Hombre
+        <input type="radio" name="hm" value="m"> Mujer
+      </p>
+      <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+      </p>
+  </form>
+    <script type="text/javascript">
+    //Haz que según se cargue la página completamente saque un mensaje por consola
+
+      $(document).ready(function(){
+        console.log("El documento esta cargado al 100%");
+      });
+      //5.  Coloca dos párrafos en el HTML
+      $(document).ready(function(){
+      $("div:first").attr("id","primero");
+      $("#primero").append("<p>Chocolate puro</p>");
+      $("#primero").append("<p>Chocolate con leche</p>");
+      $("#primero").append("<p><a href='http://google.es'>Enlace a Google</a></p>");
+      $("#primero").append("<p><a href='http://youtube.com'>Enlace a Youtube</a></p>");
+      });
+
+      //6. Haz que el los dos párrafos tengan el fondo amarillo
+      //7. Asigna una clase al primer párrafo y un identificativo al segundo, coloca un fondo de un color distinto al primer párrafo y al segundo,
+      //uno por la clase y otro por el id
+      //8. Coloca un par de enlaces en el HTML y haz que uno de ellos apunte a google, modifica el color de fondo del que apunta a google
+      $(document).ready(function(){
+        $("p:first").addClass("pope");
+        $("p:eq(1)").attr("id","pumba");
+        $("#pumba").css({'background-color':'yellow'});
+        $(".pope").css({'background-color':'yellow'});
+        $("a[href^='http://google.es']").css({'background-color': 'red'})
+      });
+
+      //9. Coloca un listado desordenado de 10 elementos con un texto, haz que el primero tenga fondo rojo,  el último fondo azul y el 5º tenga fondo amarillo
+        //10. Coloca en el HTML un formulario de login, haz que todos los input tengan un fondo azul
+      $(document).ready(function(){
+        $("li:first").css({'background-color':'red'});
+        $("li:last").css({'background-color':'blue'});
+        $("li:eq(5)").css({'background-color':'yellow'});
+        $("input").css({'background-color':'blue'});
+      });
+
+    </script>
+  </body>
+</html>
